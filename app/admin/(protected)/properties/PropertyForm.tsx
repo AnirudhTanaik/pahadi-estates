@@ -1,6 +1,5 @@
 'use client'
 
-import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import { Input } from '@/components/ui/Input'
 import { Textarea } from '@/components/ui/Textarea'
@@ -15,8 +14,6 @@ interface PropertyFormProps {
 }
 
 export function PropertyForm({ action, defaultValues, submitLabel }: PropertyFormProps) {
-  const router = useRouter()
-
   const [photos, setPhotos] = useState<string[]>(
     defaultValues?.photos?.length ? defaultValues.photos : ['']
   )
@@ -27,10 +24,6 @@ export function PropertyForm({ action, defaultValues, submitLabel }: PropertyFor
 
   function updatePhoto(index: number, value: string) {
     setPhotos((p) => p.map((url, i) => (i === index ? value : url)))
-  }
-
-  function removePhoto(index: number) {
-    setPhotos((p) => p.filter((_, i) => i !== index))
   }
 
   const v = defaultValues
