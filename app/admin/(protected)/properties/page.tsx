@@ -3,7 +3,7 @@ import { Badge } from '@/components/ui/Badge'
 import { formatPrice } from '@/lib/utils/formatters'
 import Link from 'next/link'
 import { PropertyActions } from './PropertyActions'
-
+export const revalidate = 0
 export default async function AdminPropertiesPage() {
   const properties = await getAllProperties()
 
@@ -51,14 +51,14 @@ export default async function AdminPropertiesPage() {
               <Badge
                 variant={
                   p.status === 'active' ? 'green' :
-                  p.status === 'sold'   ? 'red'   : 'mist'
+                    p.status === 'sold' ? 'red' : 'mist'
                 }
               >
                 {p.status}
               </Badge>
 
               {/* Price */}
-              <span className="font-sans text-sm text-gold">{p.price_label || formatPrice(p.price)}</span>
+              <span className="font-sans text-sm text-gold">{formatPrice(p.price)}</span>
 
               {/* Actions */}
               <PropertyActions property={p} />
