@@ -61,7 +61,7 @@ export default async function PropertyDetailsPage({
             </div>
           </div>
 
-          <PropertyGallery photos={property.photos} title={property.title} />
+          <PropertyGallery photos={property.photos ?? []} title={property.title} />
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
             {/* Left Column: Details */}
