@@ -24,9 +24,8 @@ export async function createProperty(formData: FormData) {
     is_featured: formData.get('is_featured') === 'true',
     status: formData.get('status') as string,
     photos,
-    road_access: formData.get('road_access') as string,
-    water: formData.get('water') === 'true',
-    electricity: formData.get('electricity') === 'true',
+    water_available: formData.get('water_available') === 'true',
+    electricity_available: formData.get('electricity_available') === 'true',
   }
 
   const { error } = await supabase.from('properties').insert(data)
@@ -60,9 +59,8 @@ export async function updateProperty(id: string, formData: FormData) {
     is_featured: formData.get('is_featured') === 'true',
     status: formData.get('status') as string,
     photos,
-    road_access: formData.get('road_access') as string,
-    water: formData.get('water') === 'true',
-    electricity: formData.get('electricity') === 'true',
+    water_available: formData.get('water_available') === 'true',
+    electricity_available: formData.get('electricity_available') === 'true',
   }
 
   const { error } = await supabase.from('properties').update(data).eq('id', id)

@@ -114,7 +114,6 @@ export function PropertyForm({ action, defaultValues, submitLabel }: PropertyFor
         {/* IMPORTANT FIX: no v?. for missing fields */}
         <Input name="latitude" defaultValue="" />
         <Input name="longitude" defaultValue="" />
-        <Input name="road_access" defaultValue="" />
       </section>
 
       {/* Utilities */}
