@@ -56,7 +56,7 @@ export default async function PropertyDetailsPage({
             <div className="text-left md:text-right border-t md:border-none border-[#2d5441]/40 pt-4 md:pt-0">
               <div className="font-sans text-sm text-mist tracking-widest uppercase mb-1">Asking Price</div>
               <div className="font-serif text-4xl text-gold">
-                {property.price_label || formatPrice(property.price)}
+                {formatPrice(property.price)}
               </div>
             </div>
           </div>
