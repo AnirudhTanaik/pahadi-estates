@@ -72,7 +72,9 @@ export default async function DashboardPage() {
                 <p className="font-sans text-xs text-mist mt-0.5">{p.location_name}, {p.district}</p>
               </div>
               <div className="flex items-center gap-4 ml-4 shrink-0">
-                <span className="font-sans text-sm text-gold">{p.price_label || formatPrice(p.price)}</span>
+                <span className="font-sans text-sm text-gold">
+                  {formatPrice(p.price)}
+                </span>
                 <Badge variant={p.status === 'active' ? 'green' : p.status === 'sold' ? 'red' : 'mist'}>
                   {p.status}
                 </Badge>
