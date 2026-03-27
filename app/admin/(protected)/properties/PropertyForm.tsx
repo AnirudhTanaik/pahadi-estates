@@ -116,12 +116,6 @@ export function PropertyForm({ action, defaultValues, submitLabel }: PropertyFor
             defaultValue={v?.price}
             placeholder="e.g. 8500000"
           />
-          <Input
-            label="Price Label"
-            name="price_label"
-            defaultValue={v?.price_label ?? ''}
-            placeholder="e.g. 85 L"
-          />
         </div>
       </section>
 
