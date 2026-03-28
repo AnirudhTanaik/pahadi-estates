@@ -12,8 +12,13 @@ export function Footer() {
               <span className="text-gold"> Estates</span>
             </div>
             <p className="text-mist text-sm font-sans leading-relaxed mb-6">
-              Premium property brokerage serving Himachal Pradesh since 2005.
-              Trusted by 340+ families to find their piece of the Himalayas.
+              Pahadi Estates is a premium real estate platform focused on Himachal Pradesh.
+              We help buyers discover authentic land and property opportunities across Shimla, Kullu, Kangra, and beyond.
+              {'\n\n'}
+              With a deep understanding of local regulations and terrain, we ensure transparent deals and trusted guidance
+              for both local and outside HP buyers.
+              {'\n\n'}
+              Our mission is simple — help you own your piece of the Himalayas.
             </p>
             <p className="text-mist text-xs font-sans">
               RERA Reg. No. HP-RERA-2021-XXXX
@@ -50,9 +55,10 @@ export function Footer() {
             <ul className="space-y-2">
               {[
                 { href: '/legal-guide', label: 'Legal Guide for Buyers' },
-                { href: '/legal-guide#stamp-duty', label: 'Stamp Duty Rates' },
+                { href: '/legal-guide#stamp-duty', label: 'Stamp Duty & Registration' },
+                { href: '/legal-guide#outside-hp', label: 'Himachal Land Laws (Non-HP Buyers)' },
+                { href: '/legal-guide#verification', label: 'Property Verification Checklist' },
                 { href: '/legal-guide#faq', label: 'Buyer FAQ' },
-                { href: '/legal-guide#outside-hp', label: 'Outside HP Buyers' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -86,8 +92,8 @@ export function Footer() {
             </ul>
             <div className="space-y-2 text-sm text-mist font-sans">
               <p>📍 The Mall Road, Shimla, HP 171001</p>
-              <p>📞 +91 98000 00000</p>
-              <p>✉ hello@pahadestates.com</p>
+              <p>📞 +91 9418613789</p>
+              <p>✉ anirudhtanaik@gmail.com</p>
             </div>
           </div>
         </div>
